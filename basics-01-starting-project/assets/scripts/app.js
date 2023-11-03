@@ -5,6 +5,10 @@ let logEntries = [];
 
 function calculateResult(calculationType){
     const enteredNumber = getUserInputNumber();
+
+    if(calculationType !== 'ADD' && calculationType !== 'SUBTRACT' && calculationType !== 'DIVIDE' && calculationType !== 'MULTIPLY' || !calculationType){
+        return;
+    }
     const initialResult = currentResult;
     let mathOperator;
 
